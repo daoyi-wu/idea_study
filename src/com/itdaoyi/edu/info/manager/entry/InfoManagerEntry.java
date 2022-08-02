@@ -1,5 +1,7 @@
 package com.itdaoyi.edu.info.manager.entry;
 
+import com.itdaoyi.edu.info.manager.controller.StudentController;
+
 import java.util.Scanner;
 
 public class InfoManagerEntry {
@@ -13,6 +15,8 @@ public class InfoManagerEntry {
             switch (cs){
                 case "1":
                     System.out.println("学生管理");
+                    StudentController studentController =new StudentController();
+                    studentController.start();
                     break;
                 case "2" :
                     System.out.println("教师系统");
