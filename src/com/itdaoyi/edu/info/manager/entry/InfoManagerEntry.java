@@ -10,7 +10,7 @@ public class InfoManagerEntry {
         Scanner getkb = new Scanner(System.in);
         while (true){
             System.out.println("-----------------欢迎来到道一信息管理系统-----------------");
-            System.out.println("1.学生管理\b2.教师管理\b3.退出系统\n请输入您的选择：");
+            System.out.println("1.学生管理\t2.教师管理\t3.退出系统\n请输入您的选择：");
             String cs = getkb.next();
             switch (cs){
                 case "1":

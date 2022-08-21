@@ -22,4 +22,30 @@ public class StudentService {
         }
         return exists;
     }
+
+    public Student[] findAllStudent() {
+        Student[] allStudent = studentDao.findAllStudent();
+        Boolean flag = false;
+        for (int i = 0; i < allStudent.length; i++) {
+            Student stu = allStudent[i];
+            if (stu!=null){
+                flag = true;
+                break;
+            }
+        }
+        if (flag == true){
+            return allStudent;
+        }else {
+            return null;
+        }
+    }
+
+    public void deleteStudentById(String delId) {
+        // 把ID给库管，库管进行删除
+        studentDao.deleteStudentById(delId);
+    }
+
+    public void reviseStudentById(Student stu) {
+        studentDao.reviseStudentById(stu);
+    }
 }
